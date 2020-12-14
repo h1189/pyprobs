@@ -17,6 +17,6 @@ def fizz_buzz(x):
     else:
         return x
 
-c = fizz_buzz(9) 
+num = int(input('enter a num :'))
+c = fizz_buzz(num)
 print(c)
-
