@@ -11,7 +11,7 @@ def speed_check(x):
         print('OK, Normal speed.')
     elif x >= 70:
         print('Crossing Speed limits.')
-        demerit_points = ((x-70)/5)
+        demerit_points = ((x-70)//5)
         if demerit_points >= 12:
             print('Licence suspended.')
         return demerit_points
