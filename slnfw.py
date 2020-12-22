@@ -18,6 +18,7 @@ def raw_material_check():
 raw_material_check()
  
 # Customer Needs
+
 def customer_needs():
     type_of_materials_available = {1: 'Dimond fencing', 2: 'Barbered wire fencing', 3:'Chain link fencing', 4: 'Iron Poles'}
     print(f'Available Product types are {type_of_materials_available}')
@@ -27,6 +28,10 @@ def customer_needs():
             if key == choice:
                 print(f'You have selected {type_of_materials_available[key]}')
                 break
+        else:
+            print('Choice not found. Please select an valid choice')
+            sys.exit()
+        
     except ValueError:
         print('Invalid choice, Please select valid choice..')
         sys.exit()
@@ -40,8 +45,3 @@ def customer_needs():
 customer_needs()
 
 # Customer Details
-
-def customer_details():
-
-
-
