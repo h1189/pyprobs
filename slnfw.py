@@ -7,19 +7,19 @@ def read_user_input(msg, expected_input_type):
             return int(user_input)
         except ValueError:
             print('Invalid choice, Enter a valid choice....')
-            read_user_input(msg, expected_input_type)
+            return read_user_input(msg, expected_input_type)
     elif expected_input_type == "float":
         try:
             return float(user_input)
         except ValueError:
-            print('Invalid choice, Enter a valid choice....')
-            read_user_input(msg, expected_input_type)
+            print("Invalid input,Mention the quantity in Kg's....")
+            return read_user_input(msg, expected_input_type)
     elif expected_input_type == "str":
         try:
             return str(user_input)
         except ValueError:
             print('Invalid Name, Enter an valid Name...')
-            read_user_input(msg, expected_input_type)
+            return read_user_input(msg, expected_input_type)
     else:
         print("Wrong input type ")
         read_user_input(msg, expected_input_type)
@@ -41,7 +41,7 @@ def customer_needs():
     else:
         print('Choice not found. Please select an valid choice')
         customer_needs()
-    qty_msg = "Mention Qunatity of " + type_of_materials_available[choice] + " needed in KG's : "
+    qty_msg = ("Mention Quantity of " + type_of_materials_available[choice] + " needed in Kg's : ")
     quantity = read_user_input(qty_msg, "float")
     print(f"Make an order of {quantity} KG's of {type_of_materials_available[choice]} and \n Process the Order")
 
@@ -53,6 +53,9 @@ def customer_details():
         name_of_customer = read_user_input('Enter Name of the customer: ','str')
         contact_number = read_user_input('Enter the contact number: ','int')
         customer_address = read_user_input('Address of the customer: ','str')
+        print(f" {name_of_customer}'s order has accepted....")
+
+
 
 def init():
     raw_material_check()
