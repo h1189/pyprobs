@@ -43,7 +43,7 @@ def customer_needs():
         customer_needs()
     qty_msg = ("Mention Quantity of " + type_of_materials_available[choice] + " needed in Kg's : ")
     quantity = read_user_input(qty_msg, "float")
-    print(f"Make an order of {quantity} KG's of {type_of_materials_available[choice]} and \n Process the Order")
+    print(f"Make an order of {quantity} KG's of {type_of_materials_available[choice]} \n Process the Order")
 
 
 
